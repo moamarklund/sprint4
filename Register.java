@@ -14,16 +14,16 @@ public class Register extends Queue{
     public Queue getQueue(){
 	return this.queue;
     }
-    public boolean open(){
-	return this.open = true; 
+    public void open(){
+	this.open = true; 
     }
     
-    public boolean close(){
-	return this.open = false;
+    public void close(){
+	this.open = false;
     }
 
     public boolean isOpen(){
-	if(open()){
+	if(open){
 	    return true;
 	}
 	else {
@@ -41,13 +41,15 @@ public class Register extends Queue{
     }
     // - Är kunden som står längst fram i kön klar?
     public boolean currentCustomerIsDone(){
-	if(this.queue.first().getGroceries() == 0){
-	    return true;
+	if(this.queue.length() != 0){
+	    if(this.queue.first().getGroceries() == 0){
+		return true;
+	    }
+	    else{
+		return false;
+	    }
 	}
-	else{
-	    return false;
-	}
-	
+	return false;
     }
     // - Ta bort (och returnera) kunden som står först i kön.
     public Customer removeCurrentCustomer(){

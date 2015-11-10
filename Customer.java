@@ -21,7 +21,6 @@ public class Customer {
     public int getGroceries(){
 	return this.groceries;
     }
-   
 }
 /*
 public class Register {

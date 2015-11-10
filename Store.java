@@ -7,8 +7,12 @@ public class Store{
 
 	for(int i = 0; i < _number; i++){
 	    this.registers[i] = new Register();
+	    registers[i].close();
 	}
     }
+
+
+    
 
     public float getAverageQueueLength(){
 	float total = 0;
@@ -37,7 +41,6 @@ public class Store{
     }
 
     public boolean openNewRegister(){
-
 	for(Register r : this.registers){
 	    if(!(r.isOpen())){
 		r.open();
@@ -73,6 +76,11 @@ public class Store{
 	    if((r.getQueueLength() != 0)){
 		r.step();
 	    }
+	    else{
+		r.close();
+	    }
+	    
+	 
 	}
 	return this.getDoneCustomer();
     }
@@ -110,7 +118,7 @@ public class Store{
 
 	System.out.println(s.getAverageQueueLength());
 
-	for(int i = 0; i <4 ; i++){
+	for(int i = 0; i < 4 ; i++){
 	    System.out.println(s.registers[i].getQueueLength() + "" + s.registers[i].getQueue().first());
 	}
 	
@@ -118,7 +126,9 @@ public class Store{
 	    s.step();
 	    System.out.println("==================");
 	    for(Register r : s.registers){
+		if(r.getQueueLength() != 0){
 		System.out.println(r.getQueue().first().getGroceries());
+		}
 		
 	    }
 	}
