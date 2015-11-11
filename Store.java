@@ -86,7 +86,11 @@ public class Store{
     }
 
     public String toString(){
-	return null;
+	String s = "";
+	for(Register r : this.registers){
+	    s = s + r.toString() + "\n";
+	}
+	return s;
     }
 
     public static void main(String [] args){
@@ -116,22 +120,26 @@ public class Store{
 	s.newCustomer(c4);
 	s.newCustomer(c5);
 
-	System.out.println(s.getAverageQueueLength());
+	
+	System.out.println(s.toString());
+	System.out.println("Average queue length: " + s.getAverageQueueLength());
 
-	for(int i = 0; i < 4 ; i++){
+	/*for(int i = 0; i < 4 ; i++){
 	    System.out.println(s.registers[i].getQueueLength() + "" + s.registers[i].getQueue().first());
-	}
+	    }*/
 	
 	for(int i = 0; i < 7; i++){
 	    s.step();
-	    System.out.println("==================");
+	    System.out.println(s.toString());
+	    /*System.out.println("==================");
 	    for(Register r : s.registers){
 		if(r.getQueueLength() != 0){
 		System.out.println(r.getQueue().first().getGroceries());
 		}
 		
-	    }
+		}*/
 	}
 	
     }
+
 }

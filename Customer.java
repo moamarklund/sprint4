@@ -21,6 +21,10 @@ public class Customer {
     public int getGroceries(){
 	return this.groceries;
     }
+
+    public String toString(){
+	return ("[" + this.groceries  +  "]");
+    }
 }
 /*
 public class Register {

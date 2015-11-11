@@ -62,12 +62,21 @@ public class Queue{
     }
     //- Returnera (men ta inte bort) kunden som står först i kön.
     public Customer first(){
-	    if(isEmpty()){
-		throw new EmptyQueueException();
+	    if(this.isEmpty()){
+		return null;
+		//throw new EmptyQueueException();
 	    }
 	    else{
 		return first.elem;
 	    }
+    }
+
+    public String toString(){
+	String s = this.first().toString();
+	for(int i = 0; i < this.length - 1; i++){
+	    s = s + "@";
+	}
+	return (s);
     }
     
 }

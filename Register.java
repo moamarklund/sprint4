@@ -64,4 +64,18 @@ public class Register extends Queue{
     public void removeCurrentCustomer(); // - Ta bort (och returnera) kunden som står först i kön.
     public void getQueueLength(); // - Hur lång är kön?.
     */
+
+    public String toString(){
+	String s = "";
+	if(this.open == true){
+	    if(this.queue.first() == null){
+		s = "[ ]";
+	    } else {
+		s = this.queue.toString();
+	    }
+	} else {
+	    s = "X [ ]";
+	}
+	return s;
+    }
 }
