@@ -8,6 +8,12 @@ public class Register extends Queue{
 	this.queue = new Queue();
     }
 
+    public Register(boolean _open){
+	this.open = _open;
+	this.queue = new Queue();
+    }
+
+
     public void addToQueue(Customer c){
 	this.queue.enqueue(c);
     }
@@ -23,10 +29,9 @@ public class Register extends Queue{
     }
 
     public boolean isOpen(){
-	if(open){
+	if(this.open){
 	    return true;
-	}
-	else {
+	} else {
 	    return false;
 	}
     }

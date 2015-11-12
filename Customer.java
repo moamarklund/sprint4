@@ -1,14 +1,18 @@
 public class Customer {
     private int borntime;
-    public int groceries;
+    private int groceries;
 
     public Customer(int borntime, int groceries){
 	this.borntime = borntime; //Tidsteget som kunden kom in i systemet
 	this.groceries = groceries; //Antal varor
     }
-	public void serve(){
+    
+    public void serve(){
+	if(this.groceries > 0){
 	    this.groceries = this.groceries -1;
+	}
     }
+    
     public boolean isDone(Customer c){ 
 	if(c.groceries == 0){
 	    return true;
@@ -16,6 +20,10 @@ public class Customer {
 	else{
 	    return false;
 	    }
+    }
+
+    public int getBornTime(){
+	return this.borntime;
     }
 
     public int getGroceries(){

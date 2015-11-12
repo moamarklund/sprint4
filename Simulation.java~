@@ -1,0 +1,12 @@
+import java.util.Random;
+
+public class Simulation{
+
+    Store store;
+    int time;
+    int intensity;
+    int maxGroceries;
+    int thresholdForNewRegister;
+
+
+}

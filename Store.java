@@ -3,27 +3,43 @@ public class Store{
     Register registers[];
 
     public Store(int _number){
-	this.registers = new Register [_number];
+	this.registers = new Register[_number];
 
 	for(int i = 0; i < _number; i++){
-	    this.registers[i] = new Register();
-	    registers[i].close();
+	    this.registers[i] = new Register(false);
+	    //registers[i].close();
 	}
+	this.registers[0].open();
+    } 
+    
+    public Store(){
+	this.registers = new Register[4];
+	
+	for(int i = 0; i < 4; i++){
+	    this.registers[i] = new Register(false);
+	    //registers[i].close();
+	}
+	this.registers[0].open();
     }
 
 
     
 
-    public float getAverageQueueLength(){
-	float total = 0;
-	float numberOfQueues = 0;
+    public double getAverageQueueLength(){
+	int total = 0;
+	int numberOfQueues = 0;
 
 	for(Register r : this.registers){
-	    total = total + r.getQueueLength();
-	    numberOfQueues++;
+	    if(r.isOpen()){
+		total = total + r.getQueueLength();
+		numberOfQueues = numberOfQueues + 1;
+	    }
 	}
-	float f = total/numberOfQueues;
-	return f;	
+	if(numberOfQueues == 0){
+	    return 0.0;
+	}
+	double d = total/numberOfQueues;
+	return d;	
     }
 
     public void newCustomer(Customer c){
@@ -37,7 +53,12 @@ public class Store{
 	    }
 	    index ++;
 	}
-	this.registers[target].addToQueue(c);
+	if(this.registers[target].isOpen()){
+	    this.registers[target].addToQueue(c);
+	} else {
+	    this.registers[target].open();
+	    this.registers[target].addToQueue(c);
+	}
     }
 
     public boolean openNewRegister(){
@@ -57,9 +78,9 @@ public class Store{
 		size++;
 	    }
 	}
+	//int size = this.registers.length
 	Customer ca[] = new Customer[size];
 	int index = 0;
-     
 	for(Register r : this.registers){
 	    if(r.currentCustomerIsDone()){
 		ca[index] = r.removeCurrentCustomer();
@@ -70,19 +91,21 @@ public class Store{
 	return ca;
     }
 
-    public Customer[] step(){
-	
+    public void step(){	
 	for (Register r : this.registers){
-	    if((r.getQueueLength() != 0)){
+	    if(r.getQueueLength() != 0){
 		r.step();
 	    }
-	    else{
+	}
+	//return this.getDoneCustomer();
+    }
+
+    public void closeEmpty(){
+	for(Register r : this.registers){
+	    if(r.isOpen() && r.getQueueLength() == 0){
 		r.close();
 	    }
-	    
-	 
 	}
-	return this.getDoneCustomer();
     }
 
     public String toString(){
@@ -100,7 +123,19 @@ public class Store{
 	Customer c3 = new Customer(0, 3);
 	Customer c4 = new Customer(0, 4);
 	Customer c5 = new Customer(0, 5);
-	
+
+	s.newCustomer(c1);
+	System.out.println(s);
+	s.newCustomer(c2);
+	s.openNewRegister();
+	System.out.println(s);
+	s.newCustomer(c3);
+	System.out.println(s);
+	s.newCustomer(c4);
+	System.out.println(s);
+	s.newCustomer(c5);
+	System.out.println(s);
+	/*
 	s.openNewRegister();
 	if(s.registers[0].isOpen()){
 	    System.out.println("open funkar");
@@ -124,21 +159,10 @@ public class Store{
 	System.out.println(s.toString());
 	System.out.println("Average queue length: " + s.getAverageQueueLength());
 
-	/*for(int i = 0; i < 4 ; i++){
-	    System.out.println(s.registers[i].getQueueLength() + "" + s.registers[i].getQueue().first());
-	    }*/
-	
 	for(int i = 0; i < 7; i++){
 	    s.step();
 	    System.out.println(s.toString());
-	    /*System.out.println("==================");
-	    for(Register r : s.registers){
-		if(r.getQueueLength() != 0){
-		System.out.println(r.getQueue().first().getGroceries());
-		}
-		
-		}*/
-	}
+	    }*/
 	
     }
 

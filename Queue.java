@@ -25,6 +25,15 @@ public class Queue{
     // - Hur lång är kön?
     public int length(){
 	return this.length;
+	/*
+	node n = first;
+	int counter = 0;
+	while(n){
+	    counter = counter + 1;
+	    n = n.next;
+	}
+	return counter;
+	*/
     }
     //- Ställ en kund sist i kön
     public void enqueue(Customer elem){
@@ -34,8 +43,7 @@ public class Queue{
 	    this.first = n;
 	    this.last = n;
 	    length++;
-	}
-	else{
+	} else {
 	    last.next = n;
 	    last = n;
 	    length++;
@@ -49,8 +57,7 @@ public class Queue{
     public Customer dequeue(){
 	if(isEmpty()){
 	    throw new EmptyQueueException();
-		}
-	else{
+	} else {
 	    Customer elem = first.elem;
 	    first = first.next;
 	    length--;
