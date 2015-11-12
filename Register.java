@@ -1,4 +1,4 @@
-public class Register extends Queue{
+public class Register{
     
     private boolean open;
     private Queue queue;
@@ -64,11 +64,6 @@ public class Register extends Queue{
     public int getQueueLength(){
 	return this.queue.length(); 
     }
-    /*
-    public void addToQueue(Customer c); // - Ställ kunden c sist i kön.
-    public void removeCurrentCustomer(); // - Ta bort (och returnera) kunden som står först i kön.
-    public void getQueueLength(); // - Hur lång är kön?.
-    */
 
     public String toString(){
 	String s = "";

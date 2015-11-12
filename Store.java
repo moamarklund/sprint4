@@ -73,12 +73,14 @@ public class Store{
 
     public Customer[] getDoneCustomer(){
 	int size = 0;
+	/*
 	for(Register r : this.registers){
 	    if(r.currentCustomerIsDone()){
 		size++;
 	    }
 	}
-	//int size = this.registers.length
+	*/
+	int size = this.registers.length
 	Customer ca[] = new Customer[size];
 	int index = 0;
 	for(Register r : this.registers){

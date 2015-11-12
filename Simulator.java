@@ -8,9 +8,9 @@ public class Simulator{
         int steps = 100;
 	
 	int intensity = 50;
-	int maxGroceries = 10;
-	double averageQueueLengthToOpenNewRegister = 2.0;
-	int numberOfRegisters = 4;
+	int maxGroceries = 25;
+	double averageQueueLengthToOpenNewRegister = 4.0;
+	int numberOfRegisters = 8;
 	
         Simulation s = new Simulation(intensity, maxGroceries, averageQueueLengthToOpenNewRegister, numberOfRegisters);
         for(int i = 0; i < steps; i++){

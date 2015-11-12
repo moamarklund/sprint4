@@ -1,7 +1,7 @@
 public class Queue{
-    public int length; 
-    public Node first; // - Noden som håller det första elementet
-    public Node last; // - Noden som håller det sista elementet
+    private int length; 
+    private Node first; // - Noden som håller det första elementet
+    private Node last; // - Noden som håller det sista elementet
    
     
     private class Node{
@@ -25,15 +25,6 @@ public class Queue{
     // - Hur lång är kön?
     public int length(){
 	return this.length;
-	/*
-	node n = first;
-	int counter = 0;
-	while(n){
-	    counter = counter + 1;
-	    n = n.next;
-	}
-	return counter;
-	*/
     }
     //- Ställ en kund sist i kön
     public void enqueue(Customer elem){
