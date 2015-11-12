@@ -30,6 +30,9 @@ Simulation.class: Simulation.java
 Simulator.class: Simulator.java
 	$(JCC) $(JFLAGS) Simulator.java
 
+Queue.class: Queue.java
+	$(JCC) $(JFLAGS) Queue.java
+
 test: Simulator.class
 	$(JVM) Simulator 50 20 4 10
 

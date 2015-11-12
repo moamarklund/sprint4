@@ -65,7 +65,7 @@ public class Simulation{
     public int getLongestWaitTime(){
 	return this.longestWaitTime;
     }
-
+    
     public void step(){
 	//Step time 
 	this.store.step();
