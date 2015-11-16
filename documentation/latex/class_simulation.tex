@@ -1,0 +1,183 @@
+\hypertarget{class_simulation}{}\section{Simulation Class Reference}
+\label{class_simulation}\index{Simulation@{Simulation}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulation_aa24c4314fd1e140a1b9ad5feb06c6fb0}{Simulation} ()
+\item 
+\hyperlink{class_simulation_aae94561923d7826c754567121f6b1042}{Simulation} (int \+\_\+intensity, int \+\_\+max\+Groceries, double \+\_\+threshold\+For\+New\+Register, int \+\_\+number\+Of\+Registers)
+\item 
+int \hyperlink{class_simulation_a1f4d6be58ea9284bbafac04ff9cff2f3}{get\+Time} ()
+\item 
+int \hyperlink{class_simulation_ab743aabfae74983b6e475caadfc5072f}{get\+Intensity} ()
+\item 
+int \hyperlink{class_simulation_a60e2eec59d7d04570369d014d2c585c3}{get\+Max\+Groceries} ()
+\item 
+double \hyperlink{class_simulation_a6685cc83b16bcac230972576a424b742}{get\+Threshold\+For\+New\+Register} ()
+\item 
+double \hyperlink{class_simulation_a8e21a8270cb67b355d68dcd7b61c3aac}{get\+Average\+Wait\+Time} ()
+\item 
+int \hyperlink{class_simulation_a98b45946461dbf1f68f4790036b67ac3}{get\+Number\+Of\+Customers\+Served} ()
+\item 
+int \hyperlink{class_simulation_ac44576077cf39f3c772df0b0f956a460}{get\+Longest\+Wait\+Time} ()
+\item 
+void \hyperlink{class_simulation_a191a1c3bdd167494288a49206657090c}{step} ()
+\item 
+String \hyperlink{class_simulation_a62bc9c7d0357063026acf3682b362552}{to\+String} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_simulation_a9696222d4b2febd4a35411157f99957f}{}static void {\bfseries main} (String args\mbox{[}$\,$\mbox{]})\label{class_simulation_a9696222d4b2febd4a35411157f99957f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Keeps track of the time and all statistics, determines when new customer arrives and when to open new registers. 
+\begin{DoxyParams}{Parameters}
+{\em store} & the store to be simulated \\
+\hline
+{\em time} & the number of timesteps since the simulation started \\
+\hline
+{\em intensity} & the probability there will arrive a new customer at every timestep \\
+\hline
+{\em max\+Groceries} & the maximum amount of groceries a customer can have \\
+\hline
+{\em threshold\+For\+New\+Register} & at what avarage length a new register should open \\
+\hline
+{\em average\+Wait\+Time} & the average wait time in the store \\
+\hline
+{\em number\+Of\+Customers\+Served} & the number of customer already served \\
+\hline
+{\em longest\+Wait\+Time} & the longest wait time in the store \\
+\hline
+{\em total\+Wait\+Time} & the total wait time for all customers in the store \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulation_aa24c4314fd1e140a1b9ad5feb06c6fb0}{}\index{Simulation@{Simulation}!Simulation@{Simulation}}
+\index{Simulation@{Simulation}!Simulation@{Simulation}}
+\subsubsection[{Simulation()}]{\setlength{\rightskip}{0pt plus 5cm}Simulation.\+Simulation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_simulation_aa24c4314fd1e140a1b9ad5feb06c6fb0}
+Creates a simulation \hypertarget{class_simulation_aae94561923d7826c754567121f6b1042}{}\index{Simulation@{Simulation}!Simulation@{Simulation}}
+\index{Simulation@{Simulation}!Simulation@{Simulation}}
+\subsubsection[{Simulation(int \+\_\+intensity, int \+\_\+max\+Groceries, double \+\_\+threshold\+For\+New\+Register, int \+\_\+number\+Of\+Registers)}]{\setlength{\rightskip}{0pt plus 5cm}Simulation.\+Simulation (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+intensity, }
+\item[{int}]{\+\_\+max\+Groceries, }
+\item[{double}]{\+\_\+threshold\+For\+New\+Register, }
+\item[{int}]{\+\_\+number\+Of\+Registers}
+\end{DoxyParamCaption}
+)}\label{class_simulation_aae94561923d7826c754567121f6b1042}
+Creates a simulation with given parameters 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+intensity} & \\
+\hline
+{\em \+\_\+max\+Groceries} & the maximum groceries a customer can have \\
+\hline
+{\em \+\_\+threshold\+For\+New\+Register} & when to open new registers \\
+\hline
+{\em \+\_\+number\+Of\+Registers} & the number of registers \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulation_a8e21a8270cb67b355d68dcd7b61c3aac}{}\index{Simulation@{Simulation}!get\+Average\+Wait\+Time@{get\+Average\+Wait\+Time}}
+\index{get\+Average\+Wait\+Time@{get\+Average\+Wait\+Time}!Simulation@{Simulation}}
+\subsubsection[{get\+Average\+Wait\+Time()}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation.\+get\+Average\+Wait\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a8e21a8270cb67b355d68dcd7b61c3aac}
+Checks the average waittime in the store \begin{DoxyReturn}{Returns}
+the average waittime 
+\end{DoxyReturn}
+\hypertarget{class_simulation_ab743aabfae74983b6e475caadfc5072f}{}\index{Simulation@{Simulation}!get\+Intensity@{get\+Intensity}}
+\index{get\+Intensity@{get\+Intensity}!Simulation@{Simulation}}
+\subsubsection[{get\+Intensity()}]{\setlength{\rightskip}{0pt plus 5cm}int Simulation.\+get\+Intensity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_simulation_ab743aabfae74983b6e475caadfc5072f}
+Checks the probability there will arrive a new customer at every timestep \begin{DoxyReturn}{Returns}
+the probability in procent 
+\end{DoxyReturn}
+\hypertarget{class_simulation_ac44576077cf39f3c772df0b0f956a460}{}\index{Simulation@{Simulation}!get\+Longest\+Wait\+Time@{get\+Longest\+Wait\+Time}}
+\index{get\+Longest\+Wait\+Time@{get\+Longest\+Wait\+Time}!Simulation@{Simulation}}
+\subsubsection[{get\+Longest\+Wait\+Time()}]{\setlength{\rightskip}{0pt plus 5cm}int Simulation.\+get\+Longest\+Wait\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_simulation_ac44576077cf39f3c772df0b0f956a460}
+Checks the longest waittime in the store \begin{DoxyReturn}{Returns}
+the longest waittime 
+\end{DoxyReturn}
+\hypertarget{class_simulation_a60e2eec59d7d04570369d014d2c585c3}{}\index{Simulation@{Simulation}!get\+Max\+Groceries@{get\+Max\+Groceries}}
+\index{get\+Max\+Groceries@{get\+Max\+Groceries}!Simulation@{Simulation}}
+\subsubsection[{get\+Max\+Groceries()}]{\setlength{\rightskip}{0pt plus 5cm}int Simulation.\+get\+Max\+Groceries (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a60e2eec59d7d04570369d014d2c585c3}
+Checks the max amount of groceries a customer can have \begin{DoxyReturn}{Returns}
+the maximum amount 
+\end{DoxyReturn}
+\hypertarget{class_simulation_a98b45946461dbf1f68f4790036b67ac3}{}\index{Simulation@{Simulation}!get\+Number\+Of\+Customers\+Served@{get\+Number\+Of\+Customers\+Served}}
+\index{get\+Number\+Of\+Customers\+Served@{get\+Number\+Of\+Customers\+Served}!Simulation@{Simulation}}
+\subsubsection[{get\+Number\+Of\+Customers\+Served()}]{\setlength{\rightskip}{0pt plus 5cm}int Simulation.\+get\+Number\+Of\+Customers\+Served (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a98b45946461dbf1f68f4790036b67ac3}
+Checks how many customer that has been served \begin{DoxyReturn}{Returns}
+the number of customers been served 
+\end{DoxyReturn}
+\hypertarget{class_simulation_a6685cc83b16bcac230972576a424b742}{}\index{Simulation@{Simulation}!get\+Threshold\+For\+New\+Register@{get\+Threshold\+For\+New\+Register}}
+\index{get\+Threshold\+For\+New\+Register@{get\+Threshold\+For\+New\+Register}!Simulation@{Simulation}}
+\subsubsection[{get\+Threshold\+For\+New\+Register()}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation.\+get\+Threshold\+For\+New\+Register (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a6685cc83b16bcac230972576a424b742}
+Checks at what average length a new register should open \begin{DoxyReturn}{Returns}
+the average length as a double 
+\end{DoxyReturn}
+\hypertarget{class_simulation_a1f4d6be58ea9284bbafac04ff9cff2f3}{}\index{Simulation@{Simulation}!get\+Time@{get\+Time}}
+\index{get\+Time@{get\+Time}!Simulation@{Simulation}}
+\subsubsection[{get\+Time()}]{\setlength{\rightskip}{0pt plus 5cm}int Simulation.\+get\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a1f4d6be58ea9284bbafac04ff9cff2f3}
+Checks how many timesteps it has been since the simulation started \begin{DoxyReturn}{Returns}
+the number of timesteps 
+\end{DoxyReturn}
+\hypertarget{class_simulation_a191a1c3bdd167494288a49206657090c}{}\index{Simulation@{Simulation}!step@{step}}
+\index{step@{step}!Simulation@{Simulation}}
+\subsubsection[{step()}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation.\+step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a191a1c3bdd167494288a49206657090c}
+Steps the time in the store one step and serves the first customer in every queue \hypertarget{class_simulation_a62bc9c7d0357063026acf3682b362552}{}\index{Simulation@{Simulation}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Simulation@{Simulation}}
+\subsubsection[{to\+String()}]{\setlength{\rightskip}{0pt plus 5cm}String Simulation.\+to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a62bc9c7d0357063026acf3682b362552}
+Prints the simulation out as a string \begin{DoxyReturn}{Returns}
+a string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Simulation.\+java\end{DoxyCompactItemize}

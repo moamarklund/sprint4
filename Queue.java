@@ -1,32 +1,50 @@
+
+/**
+ * Represents a queue at a register in the store
+ * @param length The length of the queue
+ * @param first The first node containing the first element in the queue
+ * @param last The last node containing the last element in the queue
+ */
 public class Queue{
-    private int length; 
-    private Node first; // - Noden som håller det första elementet
-    private Node last; // - Noden som håller det sista elementet
+    private int length;
+    private Node first;
+    private Node last; 
    
-    
-    private class Node{
-	public Customer elem; //- Kunden som står på just den platsen i kön
-	public Node next; // - Noden för platsen bakom den nuvarande.
-    
+    /**
+     * Represents a node in the queue
+     * @param elem A customer in the queue
+     * @param next The next node in the queue
+     */
+    public class Node{
+	public Customer elem;
+	public Node next;  
     }
-    
-    //I klassen Queue behövs referenser till första och sista noden i kön:
-    public Queue(){
+    /**
+     * Creates a new queue
+     */
+     public Queue(){
 	this.first = null;
 	this.last = null;
 	this.length = 0;
-       
-    }
-
+     }
+    /**
+     * Checks if a queue is empty 
+     * @return true if the queue is empty
+     */
     public boolean isEmpty() {
 	return (first == null);
     }
-
-    // - Hur lång är kön?
-    public int length(){
+    /**
+     * Checks the length of a queue
+     * @return the length as an int 
+     */
+     public int length(){
 	return this.length;
     }
-    //- Ställ en kund sist i kön
+    /**
+     * Enqueues a customer last in the queue
+     * @param elem a customer to be enqueued
+     */
     public void enqueue(Customer elem){
 	Node n = new Node();
 	n.elem = elem;
@@ -40,11 +58,15 @@ public class Queue{
 	    length++;
 	}
     }
-
+    /**
+     * @exeption Creates an exeption for when the queue is empty
+     */
     public class EmptyQueueException extends RuntimeException{}
 
-    
-    //- Ta bort (och returnera) kunden som står först i kön.
+    /**
+     * Removes the first customer in the queue
+     * @return the removed customer 
+     */
     public Customer dequeue(){
 	if(isEmpty()){
 	    throw new EmptyQueueException();
@@ -58,7 +80,10 @@ public class Queue{
 	    return elem; 
 	}	    
     }
-    //- Returnera (men ta inte bort) kunden som står först i kön.
+    /**
+     * Takes the first customer in the queue
+     * @return the first customer
+     */
     public Customer first(){
 	    if(this.isEmpty()){
 		return null;
@@ -68,7 +93,10 @@ public class Queue{
 		return first.elem;
 	    }
     }
-
+    /**
+     * Prints a queue as a string
+     * @return a string 
+     */
     public String toString(){
 	String s = this.first().toString();
 	for(int i = 0; i < this.length - 1; i++){

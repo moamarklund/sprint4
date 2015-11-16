@@ -1,0 +1,169 @@
+\hypertarget{class_register}{}\section{Register Class Reference}
+\label{class_register}\index{Register@{Register}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_register_af15631d2edc3c9b87166f923b3d3a00f}{Register} ()
+\item 
+\hyperlink{class_register_a938cbf78ca6f8b7d738a2e6aa4b2ba42}{Register} (boolean \+\_\+open)
+\item 
+void \hyperlink{class_register_a9ed3f3799b5ea459d6df53f82b54e69f}{add\+To\+Queue} (\hyperlink{class_customer}{Customer} c)
+\item 
+\hyperlink{class_queue}{Queue} \hyperlink{class_register_a6f712d705f87c1a1d0bb9acd054bb453}{get\+Queue} ()
+\item 
+void \hyperlink{class_register_ac02a67e31b492873afbbc5ce2840d7fb}{open} ()
+\item 
+void \hyperlink{class_register_a6ff4bf08b8934138ae25ebdbdaa9a968}{close} ()
+\item 
+boolean \hyperlink{class_register_a892ac0d31549027d495948c82ff3ae7a}{is\+Open} ()
+\item 
+void \hyperlink{class_register_a71c5705fbba0bf88661cf3e7dd3b10d1}{step} ()
+\item 
+boolean \hyperlink{class_register_ae7c8276901821f6e866472afa54441a7}{has\+Customers} ()
+\item 
+boolean \hyperlink{class_register_a5feae9eebb986ff4798ba79a5b1f0c0a}{current\+Customer\+Is\+Done} ()
+\item 
+\hyperlink{class_customer}{Customer} \hyperlink{class_register_a09213fdfd15a583e5c6fe0bbe8505da3}{remove\+Current\+Customer} ()
+\item 
+int \hyperlink{class_register_a447023dcde7ef511a8222805114017e5}{get\+Queue\+Length} ()
+\item 
+String \hyperlink{class_register_ab27bc35d9b9514d42378b23193bf5dee}{to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a register in a store 
+\begin{DoxyParams}{Parameters}
+{\em open} & A boolean representing if the register is open \\
+\hline
+{\em queue} & The register´s queue of customers \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_register_af15631d2edc3c9b87166f923b3d3a00f}{}\index{Register@{Register}!Register@{Register}}
+\index{Register@{Register}!Register@{Register}}
+\subsubsection[{Register()}]{\setlength{\rightskip}{0pt plus 5cm}Register.\+Register (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_register_af15631d2edc3c9b87166f923b3d3a00f}
+Creates a register \hypertarget{class_register_a938cbf78ca6f8b7d738a2e6aa4b2ba42}{}\index{Register@{Register}!Register@{Register}}
+\index{Register@{Register}!Register@{Register}}
+\subsubsection[{Register(boolean \+\_\+open)}]{\setlength{\rightskip}{0pt plus 5cm}Register.\+Register (
+\begin{DoxyParamCaption}
+\item[{boolean}]{\+\_\+open}
+\end{DoxyParamCaption}
+)}\label{class_register_a938cbf78ca6f8b7d738a2e6aa4b2ba42}
+Creates an open register 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_register_a9ed3f3799b5ea459d6df53f82b54e69f}{}\index{Register@{Register}!add\+To\+Queue@{add\+To\+Queue}}
+\index{add\+To\+Queue@{add\+To\+Queue}!Register@{Register}}
+\subsubsection[{add\+To\+Queue(\+Customer c)}]{\setlength{\rightskip}{0pt plus 5cm}void Register.\+add\+To\+Queue (
+\begin{DoxyParamCaption}
+\item[{{\bf Customer}}]{c}
+\end{DoxyParamCaption}
+)}\label{class_register_a9ed3f3799b5ea459d6df53f82b54e69f}
+Adds a customer last in the registers queue 
+\begin{DoxyParams}{Parameters}
+{\em c} & the customer to be queued \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_register_a6ff4bf08b8934138ae25ebdbdaa9a968}{}\index{Register@{Register}!close@{close}}
+\index{close@{close}!Register@{Register}}
+\subsubsection[{close()}]{\setlength{\rightskip}{0pt plus 5cm}void Register.\+close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_register_a6ff4bf08b8934138ae25ebdbdaa9a968}
+Closes a register \hypertarget{class_register_a5feae9eebb986ff4798ba79a5b1f0c0a}{}\index{Register@{Register}!current\+Customer\+Is\+Done@{current\+Customer\+Is\+Done}}
+\index{current\+Customer\+Is\+Done@{current\+Customer\+Is\+Done}!Register@{Register}}
+\subsubsection[{current\+Customer\+Is\+Done()}]{\setlength{\rightskip}{0pt plus 5cm}boolean Register.\+current\+Customer\+Is\+Done (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_register_a5feae9eebb986ff4798ba79a5b1f0c0a}
+Checks if the first customer in the queue is finished \begin{DoxyReturn}{Returns}
+true if the customer is done, otherwise false 
+\end{DoxyReturn}
+\hypertarget{class_register_a6f712d705f87c1a1d0bb9acd054bb453}{}\index{Register@{Register}!get\+Queue@{get\+Queue}}
+\index{get\+Queue@{get\+Queue}!Register@{Register}}
+\subsubsection[{get\+Queue()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Queue} Register.\+get\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_register_a6f712d705f87c1a1d0bb9acd054bb453}
+Takes a queue \begin{DoxyReturn}{Returns}
+a queue 
+\end{DoxyReturn}
+\hypertarget{class_register_a447023dcde7ef511a8222805114017e5}{}\index{Register@{Register}!get\+Queue\+Length@{get\+Queue\+Length}}
+\index{get\+Queue\+Length@{get\+Queue\+Length}!Register@{Register}}
+\subsubsection[{get\+Queue\+Length()}]{\setlength{\rightskip}{0pt plus 5cm}int Register.\+get\+Queue\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_register_a447023dcde7ef511a8222805114017e5}
+Checks the length of a registers queue \begin{DoxyReturn}{Returns}
+the length of a queue 
+\end{DoxyReturn}
+\hypertarget{class_register_ae7c8276901821f6e866472afa54441a7}{}\index{Register@{Register}!has\+Customers@{has\+Customers}}
+\index{has\+Customers@{has\+Customers}!Register@{Register}}
+\subsubsection[{has\+Customers()}]{\setlength{\rightskip}{0pt plus 5cm}boolean Register.\+has\+Customers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_register_ae7c8276901821f6e866472afa54441a7}
+Checks if a register has any customers in line \begin{DoxyReturn}{Returns}
+true if the queue is empty, otherwise false 
+\end{DoxyReturn}
+\hypertarget{class_register_a892ac0d31549027d495948c82ff3ae7a}{}\index{Register@{Register}!is\+Open@{is\+Open}}
+\index{is\+Open@{is\+Open}!Register@{Register}}
+\subsubsection[{is\+Open()}]{\setlength{\rightskip}{0pt plus 5cm}boolean Register.\+is\+Open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_register_a892ac0d31549027d495948c82ff3ae7a}
+Checks if a register is open \begin{DoxyReturn}{Returns}
+true if the register is open, otherwise false 
+\end{DoxyReturn}
+\hypertarget{class_register_ac02a67e31b492873afbbc5ce2840d7fb}{}\index{Register@{Register}!open@{open}}
+\index{open@{open}!Register@{Register}}
+\subsubsection[{open()}]{\setlength{\rightskip}{0pt plus 5cm}void Register.\+open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_register_ac02a67e31b492873afbbc5ce2840d7fb}
+Opens a register \hypertarget{class_register_a09213fdfd15a583e5c6fe0bbe8505da3}{}\index{Register@{Register}!remove\+Current\+Customer@{remove\+Current\+Customer}}
+\index{remove\+Current\+Customer@{remove\+Current\+Customer}!Register@{Register}}
+\subsubsection[{remove\+Current\+Customer()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Customer} Register.\+remove\+Current\+Customer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_register_a09213fdfd15a583e5c6fe0bbe8505da3}
+Removes the first customer in the queue \begin{DoxyReturn}{Returns}
+the removed customer 
+\end{DoxyReturn}
+\hypertarget{class_register_a71c5705fbba0bf88661cf3e7dd3b10d1}{}\index{Register@{Register}!step@{step}}
+\index{step@{step}!Register@{Register}}
+\subsubsection[{step()}]{\setlength{\rightskip}{0pt plus 5cm}void Register.\+step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_register_a71c5705fbba0bf88661cf3e7dd3b10d1}
+Serves the first customer in the queue \hypertarget{class_register_ab27bc35d9b9514d42378b23193bf5dee}{}\index{Register@{Register}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Register@{Register}}
+\subsubsection[{to\+String()}]{\setlength{\rightskip}{0pt plus 5cm}String Register.\+to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_register_ab27bc35d9b9514d42378b23193bf5dee}
+Prints a register as a string \begin{DoxyReturn}{Returns}
+a string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Register.\+java\end{DoxyCompactItemize}

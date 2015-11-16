@@ -1,0 +1,124 @@
+\hypertarget{class_store}{}\section{Store Class Reference}
+\label{class_store}\index{Store@{Store}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_store_ab43dba1d5298e700fd43f38d31636e2e}{Store} (int \+\_\+number)
+\item 
+double \hyperlink{class_store_aec5aabb20f10795fff9006eb9b638638}{get\+Average\+Queue\+Length} ()
+\item 
+void \hyperlink{class_store_a580ef39f7aee7c803d3898a276601e2a}{new\+Customer} (\hyperlink{class_customer}{Customer} c)
+\item 
+boolean \hyperlink{class_store_aacce2e538e5d09e97ac3f3a35b16f1df}{open\+New\+Register} ()
+\item 
+\hyperlink{class_customer}{Customer}\mbox{[}$\,$\mbox{]} \hyperlink{class_store_a66a370aa1836cfa5be1046c85efa54b2}{get\+Done\+Customer} ()
+\item 
+void \hyperlink{class_store_a1e6fc97b6ed42be3a794347fdcf5cec6}{step} ()
+\item 
+void \hyperlink{class_store_a42178a61e6edbfa56b99da40ecc6ee41}{close\+Empty} ()
+\item 
+String \hyperlink{class_store_a5c6d8363f12a1493a27b4c5ea65aeba5}{to\+String} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_store_ab88472a7fda9cfa427027aa7001189b9}{}static void {\bfseries main} (String\mbox{[}$\,$\mbox{]} args)\label{class_store_ab88472a7fda9cfa427027aa7001189b9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a store 
+\begin{DoxyParams}{Parameters}
+{\em registers} & the registers in the store \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_store_ab43dba1d5298e700fd43f38d31636e2e}{}\index{Store@{Store}!Store@{Store}}
+\index{Store@{Store}!Store@{Store}}
+\subsubsection[{Store(int \+\_\+number)}]{\setlength{\rightskip}{0pt plus 5cm}Store.\+Store (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+number}
+\end{DoxyParamCaption}
+)}\label{class_store_ab43dba1d5298e700fd43f38d31636e2e}
+Creates a store 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+number} & the number of registers in the store \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_store_a42178a61e6edbfa56b99da40ecc6ee41}{}\index{Store@{Store}!close\+Empty@{close\+Empty}}
+\index{close\+Empty@{close\+Empty}!Store@{Store}}
+\subsubsection[{close\+Empty()}]{\setlength{\rightskip}{0pt plus 5cm}void Store.\+close\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_store_a42178a61e6edbfa56b99da40ecc6ee41}
+Closes registers without customers \hypertarget{class_store_aec5aabb20f10795fff9006eb9b638638}{}\index{Store@{Store}!get\+Average\+Queue\+Length@{get\+Average\+Queue\+Length}}
+\index{get\+Average\+Queue\+Length@{get\+Average\+Queue\+Length}!Store@{Store}}
+\subsubsection[{get\+Average\+Queue\+Length()}]{\setlength{\rightskip}{0pt plus 5cm}double Store.\+get\+Average\+Queue\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_store_aec5aabb20f10795fff9006eb9b638638}
+Calculates the average length of all the queues in the store \begin{DoxyReturn}{Returns}
+the average length as a double 
+\end{DoxyReturn}
+\hypertarget{class_store_a66a370aa1836cfa5be1046c85efa54b2}{}\index{Store@{Store}!get\+Done\+Customer@{get\+Done\+Customer}}
+\index{get\+Done\+Customer@{get\+Done\+Customer}!Store@{Store}}
+\subsubsection[{get\+Done\+Customer()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Customer} \mbox{[}$\,$\mbox{]} Store.\+get\+Done\+Customer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_store_a66a370aa1836cfa5be1046c85efa54b2}
+Returns all the done customers in the current timestep \begin{DoxyReturn}{Returns}
+all the done customers 
+\end{DoxyReturn}
+\hypertarget{class_store_a580ef39f7aee7c803d3898a276601e2a}{}\index{Store@{Store}!new\+Customer@{new\+Customer}}
+\index{new\+Customer@{new\+Customer}!Store@{Store}}
+\subsubsection[{new\+Customer(\+Customer c)}]{\setlength{\rightskip}{0pt plus 5cm}void Store.\+new\+Customer (
+\begin{DoxyParamCaption}
+\item[{{\bf Customer}}]{c}
+\end{DoxyParamCaption}
+)}\label{class_store_a580ef39f7aee7c803d3898a276601e2a}
+Puts a customer in the shortest queue 
+\begin{DoxyParams}{Parameters}
+{\em c} & the customer to be enqueued \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_store_aacce2e538e5d09e97ac3f3a35b16f1df}{}\index{Store@{Store}!open\+New\+Register@{open\+New\+Register}}
+\index{open\+New\+Register@{open\+New\+Register}!Store@{Store}}
+\subsubsection[{open\+New\+Register()}]{\setlength{\rightskip}{0pt plus 5cm}boolean Store.\+open\+New\+Register (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_store_aacce2e538e5d09e97ac3f3a35b16f1df}
+Opens a new register \begin{DoxyReturn}{Returns}
+true if the register opened 
+\end{DoxyReturn}
+\hypertarget{class_store_a1e6fc97b6ed42be3a794347fdcf5cec6}{}\index{Store@{Store}!step@{step}}
+\index{step@{step}!Store@{Store}}
+\subsubsection[{step()}]{\setlength{\rightskip}{0pt plus 5cm}void Store.\+step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_store_a1e6fc97b6ed42be3a794347fdcf5cec6}
+Steps one timestep in the store \hypertarget{class_store_a5c6d8363f12a1493a27b4c5ea65aeba5}{}\index{Store@{Store}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Store@{Store}}
+\subsubsection[{to\+String()}]{\setlength{\rightskip}{0pt plus 5cm}String Store.\+to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_store_a5c6d8363f12a1493a27b4c5ea65aeba5}
+Prints the store as a string \begin{DoxyReturn}{Returns}
+a string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Store.\+java\end{DoxyCompactItemize}

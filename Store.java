@@ -1,9 +1,15 @@
-
+/**
+ * Represents a store 
+ * @param registers the registers in the store
+ */
 
 public class Store{
     
     Register registers[];
-
+    /**
+     * Creates a store 
+     * @param _number the number of registers in the store
+     */
     public Store(int _number){
 	this.registers = new Register[_number];
 
@@ -13,20 +19,11 @@ public class Store{
 	}
 	this.registers[0].open();
     } 
-    
-    public Store(){
-	this.registers = new Register[4];
-	
-	for(int i = 0; i < 4; i++){
-	    this.registers[i] = new Register(false);
-	    //registers[i].close();
-	}
-	this.registers[0].open();
-    }
 
-
-    
-
+   /**
+     * Calculates the average length of all the queues in the store
+     * @return the average length as a double
+     */
     public double getAverageQueueLength(){
 	int total = 0;
 	int numberOfQueues = 0;
@@ -43,7 +40,11 @@ public class Store{
 	double d = total/numberOfQueues;
 	return d;	
     }
-
+    
+    /**
+     * Puts a customer in the shortest queue
+     * @param c the customer to be enqueued
+     */
     public void newCustomer(Customer c){
 	int shortest = 10000;
 	int index = 0;
@@ -62,7 +63,10 @@ public class Store{
 	    this.registers[target].addToQueue(c);
 	}
     }
-
+    /**
+     * Opens a new register
+     * @return true if the register opened
+     */
     public boolean openNewRegister(){
 	for(Register r : this.registers){
 	    if(!(r.isOpen())){
@@ -72,7 +76,10 @@ public class Store{
 	}
 	return false;
     }
-
+    /**
+     * Returns all the done customers in the current timestep
+     * @return all the done customers  
+     */
     public Customer[] getDoneCustomer(){
 	int size = 0;
 	
@@ -82,7 +89,6 @@ public class Store{
 	    }
 	}
 	
-	//int size = this.registers.length;
 	Customer ca[] = new Customer[size];
 	int index = 0;
 	for(Register r : this.registers){
@@ -94,16 +100,19 @@ public class Store{
 	}
 	return ca;
     }
-
+    /**
+     * Steps one timestep in the store
+     */
     public void step(){	
 	for (Register r : this.registers){
 	    if(r.getQueueLength() != 0){
 		r.step();
 	    }
 	}
-	//return this.getDoneCustomer();
     }
-
+    /**
+     * Closes registers without customers
+     */
     public void closeEmpty(){
 	for(Register r : this.registers){
 	    if(r.isOpen() && r.getQueueLength() == 0){
@@ -111,7 +120,10 @@ public class Store{
 	    }
 	}
     }
-
+    /**
+     * Prints the store as a string 
+     * @return a string 
+     */
     public String toString(){
 	String s = "";
 	for(Register r : this.registers){
@@ -139,34 +151,6 @@ public class Store{
 	System.out.println(s);
 	s.newCustomer(c5);
 	System.out.println(s);
-	/*
-	s.openNewRegister();
-	if(s.registers[0].isOpen()){
-	    System.out.println("open funkar");
-	}
-
-	s.newCustomer(c1);
-	s.newCustomer(c2);
-	s.openNewRegister();
-	s.newCustomer(c3);
-
-	if(s.registers[0].getQueueLength() == 2){
-	    System.out.println("new Customer funkar");
-	}
-
-	s.openNewRegister();
-	s.openNewRegister();
-	s.newCustomer(c4);
-	s.newCustomer(c5);
-
-	
-	System.out.println(s.toString());
-	System.out.println("Average queue length: " + s.getAverageQueueLength());
-
-	for(int i = 0; i < 7; i++){
-	    s.step();
-	    System.out.println(s.toString());
-	    }*/
 	
     }
 

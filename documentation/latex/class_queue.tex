@@ -1,0 +1,118 @@
+\hypertarget{class_queue}{}\section{Queue Class Reference}
+\label{class_queue}\index{Queue@{Queue}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_queue_1_1_empty_queue_exception}{Empty\+Queue\+Exception}
+\item 
+class \hyperlink{class_queue_1_1_node}{Node}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_queue_a42f2b12b7394e3005936c51f4f63ba41}{Queue} ()
+\item 
+boolean \hyperlink{class_queue_a9f7bee80c0f6221d577101879c617767}{is\+Empty} ()
+\item 
+int \hyperlink{class_queue_afdde374966974e3ac5fdc31d399f57f1}{length} ()
+\item 
+void \hyperlink{class_queue_aa6e1e6447ac35a97b0d885707be2f28f}{enqueue} (\hyperlink{class_customer}{Customer} elem)
+\item 
+\hyperlink{class_customer}{Customer} \hyperlink{class_queue_a3e352146ffd17e0fc870baa25cfba0b5}{dequeue} ()
+\item 
+\hyperlink{class_customer}{Customer} \hyperlink{class_queue_a05348ffe9ad100823cd0518651ff4e83}{first} ()
+\item 
+String \hyperlink{class_queue_a77c01ab03058b6d9707d29a4d3321693}{to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a queue at a register in the store 
+\begin{DoxyParams}{Parameters}
+{\em length} & The length of the queue \\
+\hline
+{\em first} & The first node containing the first element in the queue \\
+\hline
+{\em last} & The last node containing the last element in the queue \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_queue_a42f2b12b7394e3005936c51f4f63ba41}{}\index{Queue@{Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!Queue@{Queue}}
+\subsubsection[{Queue()}]{\setlength{\rightskip}{0pt plus 5cm}Queue.\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_queue_a42f2b12b7394e3005936c51f4f63ba41}
+Creates a new queue 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_queue_a3e352146ffd17e0fc870baa25cfba0b5}{}\index{Queue@{Queue}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!Queue@{Queue}}
+\subsubsection[{dequeue()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Customer} Queue.\+dequeue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_queue_a3e352146ffd17e0fc870baa25cfba0b5}
+Removes the first customer in the queue \begin{DoxyReturn}{Returns}
+the removed customer 
+\end{DoxyReturn}
+\hypertarget{class_queue_aa6e1e6447ac35a97b0d885707be2f28f}{}\index{Queue@{Queue}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!Queue@{Queue}}
+\subsubsection[{enqueue(\+Customer elem)}]{\setlength{\rightskip}{0pt plus 5cm}void Queue.\+enqueue (
+\begin{DoxyParamCaption}
+\item[{{\bf Customer}}]{elem}
+\end{DoxyParamCaption}
+)}\label{class_queue_aa6e1e6447ac35a97b0d885707be2f28f}
+Enqueues a customer last in the queue 
+\begin{DoxyParams}{Parameters}
+{\em elem} & a customer to be enqueued \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_queue_a05348ffe9ad100823cd0518651ff4e83}{}\index{Queue@{Queue}!first@{first}}
+\index{first@{first}!Queue@{Queue}}
+\subsubsection[{first()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Customer} Queue.\+first (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_queue_a05348ffe9ad100823cd0518651ff4e83}
+Takes the first customer in the queue \begin{DoxyReturn}{Returns}
+the first customer 
+\end{DoxyReturn}
+\hypertarget{class_queue_a9f7bee80c0f6221d577101879c617767}{}\index{Queue@{Queue}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Queue@{Queue}}
+\subsubsection[{is\+Empty()}]{\setlength{\rightskip}{0pt plus 5cm}boolean Queue.\+is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_queue_a9f7bee80c0f6221d577101879c617767}
+Checks if a queue is empty \begin{DoxyReturn}{Returns}
+true if the queue is empty 
+\end{DoxyReturn}
+\hypertarget{class_queue_afdde374966974e3ac5fdc31d399f57f1}{}\index{Queue@{Queue}!length@{length}}
+\index{length@{length}!Queue@{Queue}}
+\subsubsection[{length()}]{\setlength{\rightskip}{0pt plus 5cm}int Queue.\+length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_queue_afdde374966974e3ac5fdc31d399f57f1}
+Checks the length of a queue \begin{DoxyReturn}{Returns}
+the length as an int 
+\end{DoxyReturn}
+\hypertarget{class_queue_a77c01ab03058b6d9707d29a4d3321693}{}\index{Queue@{Queue}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Queue@{Queue}}
+\subsubsection[{to\+String()}]{\setlength{\rightskip}{0pt plus 5cm}String Queue.\+to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_queue_a77c01ab03058b6d9707d29a4d3321693}
+Prints a queue as a string \begin{DoxyReturn}{Returns}
+a string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Queue.\+java\end{DoxyCompactItemize}
