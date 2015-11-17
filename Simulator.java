@@ -8,12 +8,6 @@
 public class Simulator{
     public static void main(String[] args) throws InterruptedException{
         int steps = 100;
-	/*
-	int intensity = 60;
-	int maxGroceries = 25;
-	double averageQueueLengthToOpenNewRegister = 4.0;
-	int numberOfRegisters = 8;
-	*/
         Simulation s = new Simulation(Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]), Integer.parseInt(args[3]));
         for(int i = 0; i < steps; i++){
             System.out.print("\033[2J\033[;H");
