@@ -28,7 +28,7 @@ public class Simulation{
      * Creates a simulation 
      */
     public Simulation(){
-	this.store = new Store();
+	this.store = new Store(4);
 	this.time = 0;
 	this.intensity = 100;
 	this.maxGroceries = 5;
